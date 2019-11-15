@@ -1,5 +1,5 @@
-import { APIGatewayEvent, APIGatewayProxyResult } from 'aws-lambda';
-import { DefaultDocumentClient, DocumentClientInterface, QueryInput, ItemList } from './lib/document_client';
+import {APIGatewayEvent, APIGatewayProxyResult} from 'aws-lambda';
+import {DefaultDocumentClient, DocumentClientInterface, ItemList, QueryInput} from './lib/document_client';
 
 const tableName = process.env.TABLE_NAME;
 const client = DefaultDocumentClient;
@@ -27,7 +27,7 @@ interface Result {
 export enum LoyaltyTierPoints {
   gold = 100000,
   silver = 50000,
-  bronze = 1
+  bronze = 10
 }
 
 export enum LoyaltyTier {
